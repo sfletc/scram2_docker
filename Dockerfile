@@ -11,7 +11,8 @@ RUN conda install --yes \
 	'bokeh' \
 	'matplotlib' \
 	'numpy' \
-	'jupyter'
+	'jupyter' \
+	'pandas'
 
 
 RUN apt-get update &&\
