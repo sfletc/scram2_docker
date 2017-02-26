@@ -14,7 +14,7 @@ RUN conda install --yes \
 	'numpy' \
 	'jupyter' \
 	'pandas' \
-	'fastx-toolkit' \
+	'fastx_toolkit' \
 	'snakemake'
 
 
