@@ -12,7 +12,9 @@ RUN conda install --yes \
 	'matplotlib' \
 	'numpy' \
 	'jupyter' \
-	'pandas'
+	'pandas' \
+	'fastx-toolkit' \
+	'snakemake'
 
 
 RUN apt-get update &&\
