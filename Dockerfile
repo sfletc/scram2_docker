@@ -7,6 +7,7 @@ RUN wget https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz && \
 
 ENV PATH "$PATH:/usr/local/go/bin"
 
+RUN conda config --add channels bioconda
 RUN conda install --yes \
 	'bokeh' \
 	'matplotlib' \
