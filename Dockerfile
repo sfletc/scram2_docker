@@ -14,8 +14,7 @@ RUN conda install --yes \
 	'numpy' \
 	'jupyter' \
 	'pandas' \
-	'fastx_toolkit' \
-	'snakemake'
+	'fastx_toolkit' 
 
 
 RUN apt-get update &&\
