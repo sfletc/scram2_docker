@@ -25,24 +25,21 @@ RUN apt-get update &&\
 	tree \
 	curl
 
-RUN go get github.com/sfletc/scram2pkg github.com/alexflint/go-arg github.com/montanaflynn/stats
+
+RUN go get github.com/sfletc/scram2 github.com/sfletc/scram2pkg github.com/spf13/cobra github.com/spf13/viper github.com/montanaflynn/stats
+RUN cd /root/go/src/github.com/sfletc/scram2 && \
+	go install
 
 WORKDIR /scram2
 RUN git clone https://github.com/sfletc/scram2_plot.git && \
 	cd scram2_plot && \
 	python setup.py install 
 
-RUN git clone https://github.com/sfletc/scram2.git && \
-	cd scram2/scram2 && \
-	go build
-
 WORKDIR /scram2_plot
 RUN	cd /scram2_plot && \
 	cp /scram2/scram2_plot/scram2_plot/* ./
 
-
-
-ENV PATH "$PATH:/scram2/scram2/scram2"
+ENV PATH "$PATH:/root/go/bin"
 
 WORKDIR /work
 
