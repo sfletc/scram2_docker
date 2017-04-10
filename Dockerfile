@@ -42,4 +42,4 @@ ENV PATH "$PATH:/root/go/bin"
 
 WORKDIR /work
 
-CMD jupyter notebook --port=8888 --no-browser --ip='*'
+CMD jupyter notebook --port=8888 --no-browser --ip='*' --allow-root
