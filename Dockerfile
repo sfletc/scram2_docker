@@ -14,8 +14,12 @@ RUN conda install --yes \
 	'numpy' \
 	'jupyter' \
 	'pandas' \
-	'fastx_toolkit' 
+	'fastx_toolkit' \
+	'perl-list-moreutils' \
+	'blast' \
+	'fastqc'
 
+RUN sed -i "s/^#\!.*$/#\!\/usr\/bin\/env perl/" /opt/conda/bin/update_blastdb.pl
 
 RUN apt-get update &&\
 	apt-get install -y \
