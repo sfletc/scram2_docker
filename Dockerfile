@@ -34,9 +34,7 @@ RUN cd /root/go/src/github.com/sfletc/scram2 && \
 	go install
 
 WORKDIR /scram2
-RUN git clone https://github.com/sfletc/scram2_plot.git && \
-	cd scram2_plot && \
-	python setup.py install 
+RUN git clone https://github.com/sfletc/scram2_plot.git 
 
 WORKDIR /scram2_plot
 RUN	cd /scram2_plot && \
