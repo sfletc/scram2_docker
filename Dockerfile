@@ -38,7 +38,7 @@ RUN git clone https://github.com/sfletc/scram_plot.git
 
 WORKDIR /scram_plot
 RUN	cd /scram_plot && \
-	cp /scram2/scram_plot/scram_plot/* ./
+	cp /scram/scram_plot/scram_plot/* ./
 
 ENV PATH "$PATH:/root/go/bin"
 
