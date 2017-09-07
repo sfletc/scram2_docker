@@ -29,16 +29,16 @@ RUN apt-get update &&\
 	curl
 
 
-RUN go get github.com/sfletc/scram2 github.com/sfletc/scram2pkg github.com/spf13/cobra github.com/spf13/viper github.com/montanaflynn/stats
-RUN cd /root/go/src/github.com/sfletc/scram2 && \
+RUN go get github.com/sfletc/scram github.com/sfletc/scramPkg github.com/spf13/cobra github.com/spf13/viper github.com/montanaflynn/stats
+RUN cd /root/go/src/github.com/sfletc/scram && \
 	go install
 
-WORKDIR /scram2
-RUN git clone https://github.com/sfletc/scram2_plot.git 
+WORKDIR /scram
+RUN git clone https://github.com/sfletc/scram_plot.git 
 
-WORKDIR /scram2_plot
-RUN	cd /scram2_plot && \
-	cp /scram2/scram2_plot/scram2_plot/* ./
+WORKDIR /scram_plot
+RUN	cd /scram_plot && \
+	cp /scram2/scram_plot/scram_plot/* ./
 
 ENV PATH "$PATH:/root/go/bin"
 
